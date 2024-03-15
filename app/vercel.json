@@ -2,5 +2,11 @@
   "version": 2,
   "installCommand": "cd .. && npm ci",
   "buildCommand": "cd .. && npx nx build app",
-  "outputDirectory": "../dist/app"
+  "outputDirectory": "../dist/app",
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "main.js"
+    }
+  ]
 }
