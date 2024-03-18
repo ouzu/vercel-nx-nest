@@ -35,6 +35,11 @@ export class AppController {
     return this.userService.users({});
   }
 
+  @Post('users')
+  async postUsers(@Body() userData: { name: string }): Promise<UserModel> {
+    return this.userService.createUser(userData);
+  }
+
   @Put('user/:id')
   async updateUser(
     @Param('id') id: string,
