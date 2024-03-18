@@ -56,6 +56,11 @@ export class AppController {
     return this.userService.deleteUser({ id: parseInt(id) });
   }
 
+  @Post('jobs')
+  async postJob(@Body() jobData: { data: string }): Promise<unknown> {
+    return this.appService.postJob(jobData);
+  }
+
   @Get()
   getData() {
     return this.appService.getData();
