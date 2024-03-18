@@ -1,7 +1,7 @@
 {
   "version": 2,
   "installCommand": "cd .. && npm ci",
-  "buildCommand": "cd .. && npx nx build app",
+  "buildCommand": "cd .. && npx prisma generate && npx nx build app",
   "outputDirectory": "../dist/app",
   "rewrites": [
     {
